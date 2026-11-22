@@ -40,3 +40,7 @@ body {
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
 }
+
+section[id] {
+  scroll-margin-top: 96px;
+}
