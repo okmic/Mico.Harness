@@ -7,6 +7,7 @@ import { WhatIsAgent } from '@/components/sections/WhatIsAgent'
 import { WhatIsDangerous } from '@/components/sections/WhatIsDangerous'
 import { WhatIsExpensive } from '@/components/sections/WhatIsExpensive'
 import { WhatToDo } from '@/components/sections/WhatToDo'
+import { ChooseModel } from '@/components/sections/ChooseModel'
 import { Outro } from '@/components/sections/Outro'
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
             <WhatIsDangerous />
             <WhatIsExpensive />
             <WhatToDo />
+            <ChooseModel />
           </div>
           <SideToc />
         </div>
