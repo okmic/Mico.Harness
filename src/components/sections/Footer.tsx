@@ -35,7 +35,7 @@ export function Footer() {
               ))}
             </div>
             <p className="text-sm text-text-muted">
-              Дальше,{' '}
+              Дальше,
               <a
                 href="https://okmic.github.io/Mico.Harness.Code/"
                 target="_blank"
@@ -43,7 +43,7 @@ export function Footer() {
                 className="text-text-secondary hover:text-text-primary"
               >
                 <span className="text-accent">Mico.Harness.Code</span>.
-              </a>{' '}
+              </a>
               {MicoHarnessRelease.next}.
             </p>
           </div>
