@@ -11,7 +11,7 @@ const toneMap = {
 
 export function WhatIsDangerous() {
   return (
-    <Section id="what-is-dangerous" spacing="md" tone="raised">
+    <Section id="what-is-dangerous" spacing="md" tone="raised" bare>
       <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
         {whatIsDangerous.eyebrow}
       </p>
@@ -30,12 +30,7 @@ export function WhatIsDangerous() {
               key={category.id}
               className={cn('rounded-card border p-5 sm:p-6', tone.border, tone.bg)}
             >
-              <p
-                className={cn(
-                  'font-mono text-xs uppercase tracking-widest',
-                  tone.label,
-                )}
-              >
+              <p className={cn('font-mono text-xs uppercase tracking-widest', tone.label)}>
                 {category.label}
               </p>
               <p className="mt-1 font-display text-lg font-semibold text-text-primary">
@@ -53,9 +48,7 @@ export function WhatIsDangerous() {
                     <p className="font-display text-sm font-semibold text-text-primary">
                       {item.name}
                     </p>
-                    <p className="mt-1 text-sm leading-relaxed text-text-secondary">
-                      {item.text}
-                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-text-secondary">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -71,9 +64,7 @@ export function WhatIsDangerous() {
           </p>
         </div>
         <div className="p-4">
-          <p className="text-sm leading-relaxed text-text-secondary">
-            {whatIsDangerous.example.text}
-          </p>
+          <p className="text-sm leading-relaxed text-text-secondary">{whatIsDangerous.example.text}</p>
           <pre className="mt-4 overflow-x-auto rounded-card bg-bg-raised p-4 font-mono text-xs leading-relaxed text-text-secondary">
             <code>{whatIsDangerous.example.code}</code>
           </pre>
@@ -102,9 +93,7 @@ export function WhatIsDangerous() {
         <div className="mt-4 grid gap-4 sm:grid-cols-3">
           {whatIsDangerous.losses.items.map((item) => (
             <div key={item.name} className="rounded-card border border-border bg-surface p-5">
-              <p className="font-display text-base font-semibold text-text-primary">
-                {item.name}
-              </p>
+              <p className="font-display text-base font-semibold text-text-primary">{item.name}</p>
               <p className="mt-1 text-sm leading-relaxed text-text-secondary">{item.text}</p>
             </div>
           ))}

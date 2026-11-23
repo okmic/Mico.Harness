@@ -17,7 +17,7 @@ const toneBg = {
 
 export function WhatIsAgent() {
   return (
-    <Section id="what-is-agent" spacing="md">
+    <Section id="what-is-agent" spacing="md" bare>
       <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
         {whatIsAgent.eyebrow}
       </p>
@@ -43,12 +43,7 @@ export function WhatIsAgent() {
             key={level.role}
             className={cn('rounded-card border border-border p-5', toneBg[level.tone])}
           >
-            <p
-              className={cn(
-                'font-mono text-xs uppercase tracking-widest',
-                toneMap[level.tone],
-              )}
-            >
+            <p className={cn('font-mono text-xs uppercase tracking-widest', toneMap[level.tone])}>
               {level.role}
             </p>
             <p className="mt-2 font-display text-lg font-semibold text-text-primary">
@@ -99,9 +94,7 @@ export function WhatIsAgent() {
               key={pair.model}
               className="grid grid-cols-2 border-b border-border last:border-b-0"
             >
-              <p className="px-4 py-3 text-sm leading-relaxed text-text-secondary">
-                {pair.model}
-              </p>
+              <p className="px-4 py-3 text-sm leading-relaxed text-text-secondary">{pair.model}</p>
               <p className="border-l border-border px-4 py-3 text-sm leading-relaxed text-text-secondary">
                 {pair.harness}
               </p>

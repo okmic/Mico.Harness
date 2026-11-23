@@ -15,7 +15,7 @@ const variants = {
 
 const sizes = {
   md: 'h-11 px-5 text-sm',
-  lg: 'h-13 px-7 text-base',
+  lg: 'h-12 px-7 text-base',
 } as const
 
 export function Button({

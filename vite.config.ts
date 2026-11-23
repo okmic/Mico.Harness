@@ -5,6 +5,11 @@ import path from 'node:path'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: '/Mico.Harness/',
+  build: {
+    outDir: './build',
+    emptyOutDir: true
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),

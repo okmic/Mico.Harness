@@ -15,7 +15,7 @@ export function Toc() {
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className="group flex items-baseline gap-4 rounded-card border border-border bg-surface p-4 transition hover:border-border-strong hover:bg-surface-hover sm:p-5"
+                className="flex items-baseline gap-4 rounded-card border border-border bg-surface p-4 transition hover:border-border-strong hover:bg-surface-hover sm:p-5"
               >
                 <span className="font-mono text-xs text-accent">{item.number}</span>
                 <span className="flex-1 font-display text-base font-semibold text-text-primary">

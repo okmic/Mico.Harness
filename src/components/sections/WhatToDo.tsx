@@ -10,7 +10,7 @@ const toneMap = {
 
 export function WhatToDo() {
   return (
-    <Section id="what-to-do" spacing="md" tone="raised">
+    <Section id="what-to-do" spacing="md" tone="raised" bare>
       <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
         {whatToDo.eyebrow}
       </p>

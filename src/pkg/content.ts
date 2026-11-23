@@ -1,24 +1,24 @@
 export const site = {
-  name: 'Harness',
-  title: 'Внутри ИИ-агента',
+  name: 'Mico.Harness',
+  title: 'Модель думает, harness действует',
   description:
-    'Туториал о том, что такое ИИ-агент на самом деле, где вы теряете данные, деньги и качество ответов и почему свой harness на 150 строк дешевле готового. Практика — в следующем туториале.',
+    'Туториал о том, что такое ИИ-агент на самом деле, где вы теряете данные, деньги и качество ответов и почему свой harness на 150 строк дешевле готового. Практика — в Mico.Harness.Code. Скоро.',
 } as const
 
-export const release = {
+export const MicoHarnessRelease = {
   date: '1 декабря 2026',
   label: 'Релиз',
+  next: "Скоро"
 } as const
 
 export const author = {
   name: 'Mico',
-  role: 'Инженер, fullstack-разработчик',
+  role: 'Инженер. Пишет Mico.Harness',
   links: [
     { label: 'CV Node.js', href: 'https://okmic.github.io/nodejs_backend_devoloper_cv/' },
     { label: 'CV Go', href: 'https://okmic.github.io/go_cv' },
     { label: 'Проекты', href: 'https://okmic.github.io/MicoProjects/' },
     { label: 'Обо мне', href: 'https://okmic.github.io/MicoEngineer/' },
-    { label: 'GitHub', href: 'https://github.com/okmic' },
   ],
 } as const
 
@@ -29,7 +29,6 @@ export const hero = {
   primaryCta: 'Начать читать',
   secondaryCta: 'К оглавлению',
   meta: '5 разделов · схема · пример кода · чек-лист',
-  release: 'Релиз 1 декабря 2026',
 } as const
 
 export const toc = {
@@ -409,7 +408,7 @@ const safe = \`<data source="\${url}">\${page.text}</data>\`
 
   final: {
     title: 'Соберите свой harness',
-    text: 'Полный код harness на 150 строк будет в репозитории. С этими пятью пунктами он безопаснее готового фреймворка, потому что вы видите каждый шаг.',
+    text: 'Полный код harness на 150 строк будет в Mico.Harness.Code. С этими пятью пунктами он безопаснее готового фреймворка, потому что вы видите каждый шаг.',
     cta: 'Дальше, выбор модели',
     href: '#choose-model',
   },
@@ -475,21 +474,21 @@ export const chooseModel = {
   },
 
   bridge: {
-    text: 'Дальше соберите свой harness. Полный код на 150 строк и разбор обработки лидов будут в следующем туториале.',
-    cta: 'Дальше, соберите harness',
+    text: 'Дальше соберите свой harness. Полный код на 150 строк и разбор обработки лидов будут в Mico.Harness.Code. Скоро.',
+    cta: 'Дальше, что после туториала',
     href: '#outro',
   },
 } as const
 
 export const outro = {
   eyebrow: 'Что дальше',
-  title: 'Соберите свой harness',
-  lead: 'Полный код harness на 150 строк и разбор обработки лидов будут в следующем туториале. Там же две модели, один harness и чек-лист в действии. Релиз 1 декабря 2026.',
+  title: 'Mico.Harness.Code',
+  lead: 'Собери harness на 150 строк. Обработка лидов на Node.js и Go, промпт-помощник, чек-лист в действии. Скоро.',
   primaryCta: 'Открыть код',
   secondaryCta: 'Следующий туториал',
 } as const
 
 export const footer = {
-  hashtags: ['#ИИАгенты', '#вайбкодинг', '#Claude', '#промптинъекции'],
-  copyright: '© 2026 Harness',
+  hashtags: ['#MicoHarness', '#ИИАгенты', '#вайбкодинг', '#Claude', '#промптинъекции'],
+  copyright: '© 2025–2026 Mico.Harness',
 } as const

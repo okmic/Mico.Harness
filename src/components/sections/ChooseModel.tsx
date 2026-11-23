@@ -4,7 +4,7 @@ import { chooseModel } from '@/pkg/content'
 
 export function ChooseModel() {
   return (
-    <Section id="choose-model" spacing="md">
+    <Section id="choose-model" spacing="md" bare>
       <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
         {chooseModel.eyebrow}
       </p>
@@ -21,7 +21,10 @@ export function ChooseModel() {
         </h3>
         <ol className="mt-4 space-y-3">
           {chooseModel.process.steps.map((step) => (
-            <li key={step.number} className="flex gap-3 rounded-card border border-border bg-surface p-4">
+            <li
+              key={step.number}
+              className="flex gap-3 rounded-card border border-border bg-surface p-4"
+            >
               <span className="font-mono text-xs text-accent">{step.number}</span>
               <p className="text-sm leading-relaxed text-text-secondary">{step.text}</p>
             </li>

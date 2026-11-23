@@ -1,12 +1,20 @@
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { hero } from '@/pkg/content'
+import { Brand } from '@/components/ui/Brand'
+import { Badge } from '@/components/ui/Badge'
+import { author, hero, MicoHarnessRelease } from '@/pkg/content'
 
 export function Hero() {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="bg-grid pointer-events-none absolute inset-0" aria-hidden="true" />
       <div className="relative mx-auto w-full max-w-content px-5 pb-20 pt-header sm:px-6 sm:pb-28 sm:pt-header-sm lg:px-8 lg:pb-36 lg:pt-header-lg">
+        <div className="mb-8 flex flex-wrap items-center gap-3">
+          <Brand size="lg" />
+          <Badge>
+            {MicoHarnessRelease.date}
+          </Badge>
+        </div>
         <p className="mb-6 font-mono text-xs uppercase tracking-widest text-text-muted">
           {hero.eyebrow}
         </p>
@@ -25,7 +33,21 @@ export function Hero() {
             {hero.secondaryCta}
           </Button>
         </div>
-        <p className="mt-6 text-sm text-text-muted">{hero.meta}</p>
+        <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-text-muted">
+          <span>
+            Автор{' '}
+            <a
+              href="https://okmic.github.io/MicoEngineer/"
+              className="text-accent hover:text-accent/80"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {author.name}
+            </a>
+          </span>
+          <span className="text-border">·</span>
+          <span>{hero.meta}</span>
+        </div>
       </div>
     </section>
   )

@@ -11,7 +11,7 @@ const toneMap = {
 
 export function WhatIsExpensive() {
   return (
-    <Section id="what-is-expensive" spacing="md">
+    <Section id="what-is-expensive" spacing="md" bare>
       <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
         {whatIsExpensive.eyebrow}
       </p>
