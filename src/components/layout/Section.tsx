@@ -11,9 +11,9 @@ type SectionProps = {
 }
 
 const spacingMap = {
-  sm: 'py-12 sm:py-16',
-  md: 'py-16 sm:py-20 lg:py-section',
-  lg: 'py-20 sm:py-section lg:py-section-lg',
+  sm: 'py-10 sm:py-14 lg:py-16',
+  md: 'py-14 sm:py-20 lg:py-section',
+  lg: 'py-16 sm:py-section lg:py-section-lg',
 } as const
 
 export function Section({
@@ -27,13 +27,13 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn(spacingMap[spacing], 'bg-bg-base', className)}
+      className={cn('w-full overflow-x-hidden', spacingMap[spacing], 'bg-bg-base', className)}
     >
       {bare ? (
-        <div className="mx-auto w-full max-w-content px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8">
           <div
             className={cn(
-              'rounded-card border border-border p-6 shadow-card sm:p-8 lg:p-10',
+              'min-w-0 rounded-card border border-border p-4 shadow-card sm:p-6 md:p-8 lg:p-10',
               tone === 'raised' ? 'bg-bg-raised' : 'bg-bg-base',
             )}
           >
@@ -41,7 +41,7 @@ export function Section({
           </div>
         </div>
       ) : (
-        <div className="mx-auto w-full max-w-content px-5 sm:px-6 lg:px-8">{children}</div>
+        <div className="mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8">{children}</div>
       )}
     </section>
   )

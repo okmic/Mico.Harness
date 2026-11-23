@@ -31,19 +31,19 @@ export function SideToc() {
 
   return (
     <aside className="hidden lg:block">
-      <nav className="sticky top-24" aria-label="Содержание">
-        <p className="mb-3 font-mono text-xs uppercase tracking-widest text-text-muted">
+      <nav className="sticky top-20 max-h-[calc(100dvh-6rem)] overflow-y-auto xl:top-24" aria-label="Содержание">
+        <p className="mb-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-text-muted xl:text-xs xl:tracking-widest">
           Содержание
         </p>
         <ul className="space-y-1">
           {toc.items.map((item) => {
             const isActive = item.id === activeId
             return (
-              <li key={item.id}>
+              <li key={item.id} className="min-w-0">
                 <a
                   href={`#${item.id}`}
                   className={cn(
-                    'flex items-baseline gap-3 rounded-btn px-3 py-2 text-sm transition',
+                    'flex min-w-0 items-baseline gap-2 rounded-btn px-2.5 py-2 text-sm transition xl:gap-3 xl:px-3',
                     isActive
                       ? 'bg-surface text-text-primary'
                       : 'text-text-secondary hover:bg-surface hover:text-text-primary',
@@ -52,13 +52,13 @@ export function SideToc() {
                 >
                   <span
                     className={cn(
-                      'font-mono text-xs',
+                      'shrink-0 font-mono text-xs',
                       isActive ? 'text-accent' : 'text-text-muted',
                     )}
                   >
                     {item.number}
                   </span>
-                  <span className="flex-1">{item.title}</span>
+                  <span className="min-w-0 flex-1 leading-snug">{item.title}</span>
                 </a>
               </li>
             )

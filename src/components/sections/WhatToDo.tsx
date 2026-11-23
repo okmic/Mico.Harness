@@ -11,43 +11,45 @@ const toneMap = {
 export function WhatToDo() {
   return (
     <Section id="what-to-do" spacing="md" tone="raised" bare>
-      <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
+      <p className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-text-muted sm:text-xs sm:tracking-widest">
         {whatToDo.eyebrow}
       </p>
-      <h2 className="mt-2 font-display text-3xl font-bold text-text-primary sm:text-4xl">
+      <h2 className="mt-2 text-balance font-display text-2xl font-bold text-text-primary sm:text-3xl md:text-4xl">
         {whatToDo.title}
       </h2>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-secondary sm:text-lg">
+      <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-text-secondary sm:text-base md:text-lg">
         {whatToDo.lead}
       </p>
 
-      <div className="mt-6 rounded-card border border-border bg-bg-raised p-4">
-        <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
+      <div className="mt-5 rounded-card border border-border bg-bg-raised p-4 sm:mt-6">
+        <p className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-text-muted sm:text-xs sm:tracking-widest">
           {whatToDo.priority.label}
         </p>
         <p className="mt-1 text-sm leading-relaxed text-text-secondary">{whatToDo.priority.text}</p>
       </div>
 
-      <div className="mt-8 space-y-4">
+      <div className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
         {whatToDo.items.map((item) => {
           const tone = toneMap[item.tone]
           return (
             <div
               key={item.id}
-              className={cn('rounded-card border p-5 sm:p-6', tone.border, tone.bg)}
+              className={cn('min-w-0 rounded-card border p-4 sm:p-5 md:p-6', tone.border, tone.bg)}
             >
-              <div className="flex items-baseline gap-3">
-                <span className={cn('font-mono text-xs', tone.label)}>{item.number}</span>
-                <p className="font-display text-lg font-semibold text-text-primary">{item.title}</p>
+              <div className="flex min-w-0 items-baseline gap-2 sm:gap-3">
+                <span className={cn('shrink-0 font-mono text-xs', tone.label)}>{item.number}</span>
+                <p className="min-w-0 font-display text-base font-semibold text-text-primary sm:text-lg">
+                  {item.title}
+                </p>
               </div>
               <p className="mt-2 text-sm leading-relaxed text-text-secondary">{item.why}</p>
-              <div className="mt-3 flex items-start gap-2 rounded-card border border-border bg-bg-base p-3">
+              <div className="mt-3 flex min-w-0 items-start gap-2 rounded-card border border-border bg-bg-base p-3">
                 <AlertTriangle className="mt-0.5 size-4 shrink-0 text-danger" aria-hidden="true" />
-                <p className="text-sm leading-relaxed text-text-secondary">{item.risk}</p>
+                <p className="min-w-0 text-sm leading-relaxed text-text-secondary">{item.risk}</p>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-text-secondary">{item.how}</p>
               {item.code && (
-                <pre className="mt-3 overflow-x-auto rounded-card bg-bg-base p-4 font-mono text-xs leading-relaxed text-text-secondary">
+                <pre className="mt-3 max-w-full overflow-x-auto rounded-card bg-bg-base p-3 font-mono text-[0.7rem] leading-relaxed text-text-secondary sm:p-4 sm:text-xs">
                   <code>{item.code}</code>
                 </pre>
               )}
@@ -56,18 +58,19 @@ export function WhatToDo() {
         })}
       </div>
 
-      <div className="mt-10 rounded-card border border-border bg-surface p-5 sm:p-6">
-        <h3 className="font-display text-xl font-semibold text-text-primary sm:text-2xl">
+      <div className="mt-8 rounded-card border border-border bg-surface p-4 sm:mt-10 sm:p-5 md:p-6">
+        <h3 className="font-display text-lg font-semibold text-text-primary sm:text-xl md:text-2xl">
           {whatToDo.checklist.title}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-          {whatToDo.checklist.text}
-        </p>
+        <p className="mt-2 text-sm leading-relaxed text-text-secondary">{whatToDo.checklist.text}</p>
         <ul className="mt-4 space-y-2">
           {whatToDo.checklist.items.map((item) => (
-            <li key={item.item} className="flex gap-2 text-sm leading-relaxed text-text-secondary">
+            <li
+              key={item.item}
+              className="flex min-w-0 gap-2 text-sm leading-relaxed text-text-secondary"
+            >
               <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" aria-hidden="true" />
-              <span>
+              <span className="min-w-0">
                 <span className="font-mono text-xs text-accent">{item.item}</span> {item.question}
               </span>
             </li>
@@ -76,8 +79,8 @@ export function WhatToDo() {
         <p className="mt-3 text-sm text-text-muted">{whatToDo.checklist.note}</p>
       </div>
 
-      <div className="mt-10 rounded-card border border-accent/30 bg-accent-soft p-5 sm:p-6">
-        <h3 className="font-display text-xl font-semibold text-text-primary sm:text-2xl">
+      <div className="mt-8 rounded-card border border-accent/30 bg-accent-soft p-4 sm:mt-10 sm:p-5 md:p-6">
+        <h3 className="font-display text-lg font-semibold text-text-primary sm:text-xl md:text-2xl">
           {whatToDo.final.title}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-text-secondary sm:text-base">
@@ -88,7 +91,7 @@ export function WhatToDo() {
           className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80"
         >
           {whatToDo.final.cta}
-          <ArrowRight className="size-4" aria-hidden="true" />
+          <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
         </a>
       </div>
     </Section>
