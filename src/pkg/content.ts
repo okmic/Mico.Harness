@@ -15,10 +15,8 @@ export const author = {
   name: 'Mico',
   role: 'Инженер. Пишет Mico.Harness',
   links: [
-    { label: 'CV Node.js', href: 'https://okmic.github.io/nodejs_backend_devoloper_cv/' },
-    { label: 'CV Go', href: 'https://okmic.github.io/go_cv' },
-    { label: 'Проекты', href: 'https://okmic.github.io/MicoProjects/' },
     { label: 'Обо мне', href: 'https://okmic.github.io/MicoEngineer/' },
+    { label: 'Mico', href: 'https://okmic.github.io/Mico' },
   ],
 } as const
 
@@ -26,8 +24,6 @@ export const hero = {
   eyebrow: 'Туториал · 21 минута чтения',
   title: 'Вайб-кодинг дал суперсилу. И теперь вы отдаёте агенту почту.',
   lead: 'Claude — не агент. Агент — это harness. Разберём на пальцах, где вы теряете данные, деньги и качество ответов и как собрать свой harness на 150 строк.',
-  primaryCta: 'Начать читать',
-  secondaryCta: 'К оглавлению',
   meta: '5 разделов · схема · пример кода · чек-лист',
 } as const
 
@@ -483,9 +479,8 @@ export const chooseModel = {
 export const outro = {
   eyebrow: 'Что дальше',
   title: 'Mico.Harness.Code',
+  link: "https://okmic.github.io/Mico.Harness.Code",
   lead: 'Собери harness на 150 строк. Обработка лидов на Node.js и Go, промпт-помощник, чек-лист в действии. Скоро.',
-  primaryCta: 'Открыть код',
-  secondaryCta: 'Следующий туториал',
 } as const
 
 export const footer = {

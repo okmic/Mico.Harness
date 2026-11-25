@@ -1,5 +1,3 @@
-import { ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
 import { Brand } from '@/components/ui/Brand'
 import { Badge } from '@/components/ui/Badge'
 import { author, hero, MicoHarnessRelease } from '@/pkg/content'
@@ -25,16 +23,6 @@ export function Hero() {
         <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-text-secondary sm:mt-6 sm:text-base md:text-lg">
           {hero.lead}
         </p>
-
-        <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">
-          <Button size="lg" className="w-full justify-center sm:w-auto">
-            {hero.primaryCta}
-            <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
-          </Button>
-          <Button size="lg" variant="secondary" className="w-full justify-center sm:w-auto">
-            {hero.secondaryCta}
-          </Button>
-        </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.8rem] text-text-muted sm:mt-8 sm:text-sm">
           <span>
