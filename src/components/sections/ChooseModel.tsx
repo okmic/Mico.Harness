@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react'
 import { Section } from '@/components/layout/Section'
 import { chooseModel } from '@/pkg/content'
 
@@ -96,13 +95,6 @@ export function ChooseModel() {
         <p className="max-w-2xl text-sm leading-relaxed text-text-secondary">
           {chooseModel.bridge.text}
         </p>
-        <a
-          href={chooseModel.bridge.href}
-          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80"
-        >
-          {chooseModel.bridge.cta}
-          <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
-        </a>
       </div>
     </Section>
   )

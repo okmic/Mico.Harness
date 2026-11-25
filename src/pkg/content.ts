@@ -471,7 +471,6 @@ export const chooseModel = {
 
   bridge: {
     text: 'Дальше соберите свой harness. Полный код на 150 строк и разбор обработки лидов будут в Mico.Harness.Code. Скоро.',
-    cta: 'Дальше, что после туториала',
     href: '#outro',
   },
 } as const
@@ -485,5 +484,5 @@ export const outro = {
 
 export const footer = {
   hashtags: ['#MicoHarness', '#ИИАгенты', '#вайбкодинг', '#Claude', '#промптинъекции'],
-  copyright: '© 2025–2026 Mico.Harness',
+  copyright: '© Декабрь 2026 Mico.Harness',
 } as const
